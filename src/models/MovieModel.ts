@@ -65,7 +65,7 @@ export class MovieModel extends MediaTypeModel {
 	}
 
 	getTags(): string[] {
-		return [mediaDbTag, 'tv', 'movie'];
+		return ['media', 'movies'];
 	}
 
 	getMediaType(): MediaType {

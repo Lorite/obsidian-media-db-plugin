@@ -47,11 +47,11 @@ export class GameModel extends MediaTypeModel {
 	}
 
 	getTags(): string[] {
-		return [mediaDbTag, 'game'];
+		return ['media', 'videogames'];
 	}
 
 	getMediaType(): MediaType {
-		return MediaType.Game;
+		return MediaType.Videogame;
 	}
 
 	getSummary(): string {

@@ -206,7 +206,7 @@ export default class MediaDbPlugin extends Plugin {
 		}
 
 		// filter the results
-		apiSearchResults = apiSearchResults.filter(x => types.contains(x.type));
+		apiSearchResults = apiSearchResults.filter(Boolean).filter(x => types.contains(x.type));
 
 		let selectResults: MediaTypeModel[];
 		const proceed: boolean = false;

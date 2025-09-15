@@ -18,7 +18,7 @@ export class GiantBombAPI extends APIModel {
 		this.apiName = 'GiantBombAPI';
 		this.apiDescription = 'A free API for games.';
 		this.apiUrl = 'https://www.giantbomb.com/api';
-		this.types = [MediaType.Game];
+		this.types = [MediaType.Videogame];
 	}
 
 	async searchByTitle(title: string): Promise<MediaTypeModel[]> {
@@ -136,7 +136,7 @@ export class GiantBombAPI extends APIModel {
 			| undefined;
 
 		return new GameModel({
-			type: MediaType.Game,
+			type: MediaType.Videogame,
 			title: result.name,
 			englishTitle: result.name,
 			year: year,

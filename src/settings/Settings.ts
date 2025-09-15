@@ -517,8 +517,8 @@ export class MediaDbSettingTab extends PluginSettingTab {
 			});
 
 		new Setting(containerEl)
-			.setName('Game template')
-			.setDesc('Template file to be used when creating a new note for a game.')
+			.setName('Videogame template')
+			.setDesc('Template file to be used when creating a new note for a videogame.')
 			.addSearch(cb => {
 				new FileSuggest(this.app, cb.inputEl);
 				cb.setPlaceholder('Example: gameTemplate.md')

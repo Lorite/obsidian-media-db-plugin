@@ -50,7 +50,7 @@ export class MusicReleaseModel extends MediaTypeModel {
 	}
 
 	getTags(): string[] {
-		return [mediaDbTag, 'music', this.subType];
+		return ['media', 'music'];
 	}
 
 	getMediaType(): MediaType {

@@ -138,9 +138,9 @@ export class SteamAPI extends APIModel {
 		this.apiName = 'SteamAPI';
 		this.apiDescription = 'A free API for all Steam games.';
 		this.apiUrl = 'https://www.steampowered.com/';
-		this.types = [MediaType.Game];
+		this.types = [MediaType.Videogame];
 		this.typeMappings = new Map<string, string>();
-		this.typeMappings.set('game', 'game');
+		this.typeMappings.set('videogame', 'videogame');
 	}
 
 	async searchByTitle(title: string): Promise<MediaTypeModel[]> {
@@ -164,7 +164,7 @@ export class SteamAPI extends APIModel {
 		for (const result of data) {
 			ret.push(
 				new GameModel({
-					type: MediaType.Game,
+					type: MediaType.Videogame,
 					title: result.name,
 					englishTitle: result.name,
 					year: '',
@@ -216,7 +216,7 @@ export class SteamAPI extends APIModel {
 		}
 
 		return new GameModel({
-			type: MediaType.Game,
+			type: MediaType.Videogame,
 			title: result.name,
 			englishTitle: result.name,
 			year: new Date(result.release_date.date).getFullYear().toString(),

@@ -67,11 +67,11 @@ export class OMDbAPI extends APIModel {
 		this.apiName = 'OMDbAPI';
 		this.apiDescription = 'A free API for Movies, Series and Games.';
 		this.apiUrl = 'https://www.omdbapi.com/';
-		this.types = [MediaType.Movie, MediaType.Series, MediaType.Game];
+		this.types = [MediaType.Movie, MediaType.Series, MediaType.Videogame];
 		this.typeMappings = new Map<string, string>();
 		this.typeMappings.set('movie', 'movie');
 		this.typeMappings.set('series', 'series');
-		this.typeMappings.set('game', 'game');
+		this.typeMappings.set('videogame', 'videogame');
 	}
 
 	async searchByTitle(title: string): Promise<MediaTypeModel[]> {
@@ -141,7 +141,7 @@ export class OMDbAPI extends APIModel {
 						id: result.imdbID,
 					}),
 				);
-			} else if (type === 'game') {
+			} else if (type === 'videogame') {
 				ret.push(
 					new GameModel({
 						type: type,
@@ -254,7 +254,7 @@ export class OMDbAPI extends APIModel {
 					personalRating: 0,
 				},
 			});
-		} else if (type === 'game') {
+		} else if (type === 'videogame') {
 			return new GameModel({
 				type: type,
 				title: result.Title,

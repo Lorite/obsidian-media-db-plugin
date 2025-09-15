@@ -61,7 +61,7 @@ export class ComicMangaModel extends MediaTypeModel {
 	}
 
 	getTags(): string[] {
-		return [mediaDbTag, 'manga', 'light-novel', 'comicbook'];
+		return ['media', 'manga', 'light-novel', 'comicbook'];
 	}
 
 	getMediaType(): MediaType {

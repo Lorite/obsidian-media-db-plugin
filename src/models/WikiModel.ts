@@ -32,7 +32,7 @@ export class WikiModel extends MediaTypeModel {
 	}
 
 	getTags(): string[] {
-		return [mediaDbTag, 'wiki'];
+		return ['media', 'wiki'];
 	}
 
 	getMediaType(): MediaType {

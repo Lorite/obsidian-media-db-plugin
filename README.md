@@ -2,6 +2,14 @@
 
 A plugin that can query multiple APIs for movies, series, anime, manga, books, comics, games, music and wiki articles, and import them into your vault.
 
+### LORITE NOTES
+
+#### Build the plugin
+
+1. Run `npm install` in the terminal to install the dependencies.
+2. Run `npm install -g bun` to install bun if you don't have it yet.
+3. Run `npm run dev` in the terminal to build the plugin and watch for changes. The output will be in the `exampleVault/.obsidian/plugins/obsidian-media-db-plugin` folder. Copy this folder to your vault's plugin folder to test it.
+
 ### Features
 
 #### Search by Title

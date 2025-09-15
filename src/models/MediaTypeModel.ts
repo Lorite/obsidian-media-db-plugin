@@ -35,7 +35,9 @@ export abstract class MediaTypeModel {
 	abstract getTags(): string[];
 
 	toMetaDataObject(): Record<string, unknown> {
-		return { ...this.getWithOutUserData(), ...this.userData, tags: this.getTags().join('/') };
+		// Previously tags were joined with '/': mediaDB/movies.
+		// Now return an array of tags, e.g. ['media','movies'] for better querying in Obsidian.
+		return { ...this.getWithOutUserData(), ...this.userData, tags: this.getTags() };
 	}
 
 	getWithOutUserData(): Record<string, unknown> {

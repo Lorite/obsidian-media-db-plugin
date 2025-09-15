@@ -18,7 +18,7 @@ export const MEDIA_TYPES: MediaType[] = [
 	MediaType.Movie,
 	MediaType.Series,
 	MediaType.ComicManga,
-	MediaType.Game,
+	MediaType.Videogame,
 	MediaType.Wiki,
 	MediaType.MusicRelease,
 	MediaType.BoardGame,
@@ -41,7 +41,7 @@ export class MediaTypeManager {
 		this.mediaFileNameTemplateMap.set(MediaType.Movie, settings.movieFileNameTemplate);
 		this.mediaFileNameTemplateMap.set(MediaType.Series, settings.seriesFileNameTemplate);
 		this.mediaFileNameTemplateMap.set(MediaType.ComicManga, settings.mangaFileNameTemplate);
-		this.mediaFileNameTemplateMap.set(MediaType.Game, settings.gameFileNameTemplate);
+		this.mediaFileNameTemplateMap.set(MediaType.Videogame, settings.gameFileNameTemplate);
 		this.mediaFileNameTemplateMap.set(MediaType.Wiki, settings.wikiFileNameTemplate);
 		this.mediaFileNameTemplateMap.set(MediaType.MusicRelease, settings.musicReleaseFileNameTemplate);
 		this.mediaFileNameTemplateMap.set(MediaType.BoardGame, settings.boardgameFileNameTemplate);
@@ -51,7 +51,7 @@ export class MediaTypeManager {
 		this.mediaTemplateMap.set(MediaType.Movie, settings.movieTemplate);
 		this.mediaTemplateMap.set(MediaType.Series, settings.seriesTemplate);
 		this.mediaTemplateMap.set(MediaType.ComicManga, settings.mangaTemplate);
-		this.mediaTemplateMap.set(MediaType.Game, settings.gameTemplate);
+		this.mediaTemplateMap.set(MediaType.Videogame, settings.gameTemplate);
 		this.mediaTemplateMap.set(MediaType.Wiki, settings.wikiTemplate);
 		this.mediaTemplateMap.set(MediaType.MusicRelease, settings.musicReleaseTemplate);
 		this.mediaTemplateMap.set(MediaType.BoardGame, settings.boardgameTemplate);
@@ -63,7 +63,7 @@ export class MediaTypeManager {
 		this.mediaFolderMap.set(MediaType.Movie, settings.movieFolder);
 		this.mediaFolderMap.set(MediaType.Series, settings.seriesFolder);
 		this.mediaFolderMap.set(MediaType.ComicManga, settings.mangaFolder);
-		this.mediaFolderMap.set(MediaType.Game, settings.gameFolder);
+		this.mediaFolderMap.set(MediaType.Videogame, settings.gameFolder);
 		this.mediaFolderMap.set(MediaType.Wiki, settings.wikiFolder);
 		this.mediaFolderMap.set(MediaType.MusicRelease, settings.musicReleaseFolder);
 		this.mediaFolderMap.set(MediaType.BoardGame, settings.boardgameFolder);
@@ -140,7 +140,7 @@ export class MediaTypeManager {
 			return new SeriesModel(obj);
 		} else if (mediaType === MediaType.ComicManga) {
 			return new ComicMangaModel(obj);
-		} else if (mediaType === MediaType.Game) {
+		} else if (mediaType === MediaType.Videogame) {
 			return new GameModel(obj);
 		} else if (mediaType === MediaType.Wiki) {
 			return new WikiModel(obj);

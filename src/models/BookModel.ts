@@ -51,7 +51,7 @@ export class BookModel extends MediaTypeModel {
 	}
 
 	getTags(): string[] {
-		return [mediaDbTag, 'book'];
+		return ['media', 'books'];
 	}
 
 	getMediaType(): MediaType {

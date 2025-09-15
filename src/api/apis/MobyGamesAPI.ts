@@ -22,7 +22,7 @@ export class MobyGamesAPI extends APIModel {
 		this.apiName = 'MobyGamesAPI';
 		this.apiDescription = 'A free API for games.';
 		this.apiUrl = 'https://api.mobygames.com/v1';
-		this.types = [MediaType.Game];
+		this.types = [MediaType.Videogame];
 	}
 
 	async searchByTitle(title: string): Promise<MediaTypeModel[]> {
@@ -55,7 +55,7 @@ export class MobyGamesAPI extends APIModel {
 		for (const result of data.games) {
 			ret.push(
 				new GameModel({
-					type: MediaType.Game,
+					type: MediaType.Videogame,
 					title: result.title,
 					englishTitle: result.title,
 					year: new Date(result.platforms[0].first_release_date).getFullYear().toString(),
@@ -90,7 +90,7 @@ export class MobyGamesAPI extends APIModel {
 		const result = data.games[0];
 
 		return new GameModel({
-			type: MediaType.Game,
+			type: MediaType.Videogame,
 			title: result.title,
 			englishTitle: result.title,
 			year: new Date(result.platforms[0].first_release_date).getFullYear().toString(),
