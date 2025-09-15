@@ -132,6 +132,7 @@ export class MusicBrainzAPI extends APIModel {
 				new MusicReleaseModel({
 					type: 'musicRelease',
 					title: result.title,
+					aliases: [result.title],
 					englishTitle: result.title,
 					year: new Date(result['first-release-date']).getFullYear().toString(),
 					releaseDate: this.plugin.dateFormatter.format(result['first-release-date'], this.apiDateFormat) ?? 'unknown',
@@ -196,6 +197,7 @@ export class MusicBrainzAPI extends APIModel {
 		return new MusicReleaseModel({
 			type: 'musicRelease',
 			title: result.title,
+			aliases: [result.title],
 			englishTitle: result.title,
 			year: new Date(result['first-release-date']).getFullYear().toString(),
 			releaseDate: this.plugin.dateFormatter.format(result['first-release-date'], this.apiDateFormat) ?? 'unknown',

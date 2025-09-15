@@ -67,6 +67,7 @@ export class WikipediaAPI extends APIModel {
 				new WikiModel({
 					type: 'wiki',
 					title: result.title,
+					aliases: [result.title],
 					englishTitle: result.title,
 					year: '',
 					dataSource: this.apiName,
@@ -94,6 +95,7 @@ export class WikipediaAPI extends APIModel {
 
 		return new WikiModel({
 			title: result.title,
+			aliases: [result.title],
 			englishTitle: result.title,
 			dataSource: this.apiName,
 			url: result.fullurl,

@@ -49,6 +49,7 @@ export class BoardGameGeekAPI extends APIModel {
 					dataSource: this.apiName,
 					id,
 					title,
+					aliases: [title],
 					englishTitle: title,
 					year,
 				}),
@@ -97,6 +98,7 @@ export class BoardGameGeekAPI extends APIModel {
 		return new BoardGameModel({
 			title: title ?? undefined,
 			englishTitle: title ?? undefined,
+			aliases: [title],
 			year: year === '0' ? '' : year,
 			dataSource: this.apiName,
 			url: `https://boardgamegeek.com/boardgame/${id}`,

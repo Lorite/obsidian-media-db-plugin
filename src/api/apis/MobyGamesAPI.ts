@@ -57,6 +57,7 @@ export class MobyGamesAPI extends APIModel {
 				new GameModel({
 					type: MediaType.Videogame,
 					title: result.title,
+					aliases: [result.title],
 					englishTitle: result.title,
 					year: new Date(result.platforms[0].first_release_date).getFullYear().toString(),
 					dataSource: this.apiName,
@@ -92,6 +93,7 @@ export class MobyGamesAPI extends APIModel {
 		return new GameModel({
 			type: MediaType.Videogame,
 			title: result.title,
+			aliases: [result.title],
 			englishTitle: result.title,
 			year: new Date(result.platforms[0].first_release_date).getFullYear().toString(),
 			dataSource: this.apiName,

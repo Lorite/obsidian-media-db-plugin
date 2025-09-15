@@ -67,6 +67,7 @@ export class OpenLibraryAPI extends APIModel {
 					title: result.title,
 					englishTitle: result.title,
 					year: result.first_publish_year.toString(),
+					aliases: [result.title],
 					dataSource: this.apiName,
 					id: result.key,
 					author: result.author_name.join(', '),
@@ -112,6 +113,7 @@ export class OpenLibraryAPI extends APIModel {
 		return new BookModel({
 			title: result.title,
 			year: result.first_publish_year.toString(),
+			aliases: [result.title],
 			dataSource: this.apiName,
 			url: `https://openlibrary.org` + result.key,
 			id: result.key,

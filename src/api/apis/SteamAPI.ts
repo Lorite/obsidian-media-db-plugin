@@ -166,6 +166,7 @@ export class SteamAPI extends APIModel {
 				new GameModel({
 					type: MediaType.Videogame,
 					title: result.name,
+					aliases: [result.name],
 					englishTitle: result.name,
 					year: '',
 					dataSource: this.apiName,
@@ -218,6 +219,7 @@ export class SteamAPI extends APIModel {
 		return new GameModel({
 			type: MediaType.Videogame,
 			title: result.name,
+			aliases: [result.name],
 			englishTitle: result.name,
 			year: new Date(result.release_date.date).getFullYear().toString(),
 			dataSource: this.apiName,

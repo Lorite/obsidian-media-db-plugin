@@ -63,6 +63,7 @@ export class MALAPI extends APIModel {
 					new MovieModel({
 						subType: '',
 						title: result.title,
+						aliases: [result.title],
 						englishTitle: result.title_english ?? result.title,
 						year,
 						dataSource: this.apiName,
@@ -75,6 +76,7 @@ export class MALAPI extends APIModel {
 					new MovieModel({
 						subType: type,
 						title: result.title,
+						aliases: [result.title],
 						englishTitle: result.title_english ?? result.title,
 						year,
 						dataSource: this.apiName,
@@ -86,6 +88,7 @@ export class MALAPI extends APIModel {
 					new SeriesModel({
 						subType: type,
 						title: result.title,
+						aliases: [result.title],
 						englishTitle: result.title_english ?? result.title,
 						year,
 						dataSource: this.apiName,
@@ -131,6 +134,7 @@ export class MALAPI extends APIModel {
 			return new MovieModel({
 				subType: undefined,
 				title: result.title,
+				aliases: [result.title],
 				englishTitle: result.title_english ?? result.title,
 				year: year,
 				dataSource: this.apiName,
@@ -161,6 +165,7 @@ export class MALAPI extends APIModel {
 			return new MovieModel({
 				subType: type,
 				title: result.title,
+				aliases: [result.title],
 				englishTitle: result.title_english ?? result.title,
 				year: year,
 				dataSource: this.apiName,
@@ -189,6 +194,7 @@ export class MALAPI extends APIModel {
 			return new SeriesModel({
 				subType: type,
 				title: result.title,
+				aliases: [result.title],
 				englishTitle: result.title_english ?? result.title,
 				year: year,
 				dataSource: this.apiName,

@@ -124,6 +124,7 @@ export class OMDbAPI extends APIModel {
 					new MovieModel({
 						type: type,
 						title: result.Title,
+						aliases: [result.Title],
 						englishTitle: result.Title,
 						year: result.Year,
 						dataSource: this.apiName,
@@ -135,6 +136,7 @@ export class OMDbAPI extends APIModel {
 					new SeriesModel({
 						type: type,
 						title: result.Title,
+						aliases: [result.Title],
 						englishTitle: result.Title,
 						year: result.Year,
 						dataSource: this.apiName,
@@ -146,6 +148,7 @@ export class OMDbAPI extends APIModel {
 					new GameModel({
 						type: type,
 						title: result.Title,
+						aliases: [result.Title],
 						englishTitle: result.Title,
 						year: result.Year,
 						dataSource: this.apiName,
@@ -196,6 +199,7 @@ export class OMDbAPI extends APIModel {
 			return new MovieModel({
 				type: type,
 				title: result.Title,
+				aliases: [result.Title],
 				englishTitle: result.Title,
 				year: result.Year,
 				dataSource: this.apiName,
@@ -227,6 +231,7 @@ export class OMDbAPI extends APIModel {
 			return new SeriesModel({
 				type: type,
 				title: result.Title,
+				aliases: [result.Title],
 				englishTitle: result.Title,
 				year: result.Year,
 				dataSource: this.apiName,
@@ -258,6 +263,7 @@ export class OMDbAPI extends APIModel {
 			return new GameModel({
 				type: type,
 				title: result.Title,
+				aliases: [result.Title],
 				englishTitle: result.Title,
 				year: result.Year,
 				dataSource: this.apiName,

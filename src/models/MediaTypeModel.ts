@@ -10,6 +10,7 @@ export abstract class MediaTypeModel {
 	url: string;
 	id: string;
 	image?: string;
+	aliases: string[];
 
 	userData: object;
 
@@ -23,6 +24,7 @@ export abstract class MediaTypeModel {
 		this.url = '';
 		this.id = '';
 		this.image = '';
+		this.aliases = [];
 
 		this.userData = {};
 	}
