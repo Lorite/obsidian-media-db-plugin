@@ -234,7 +234,7 @@ export class SteamAPI extends APIModel {
 			releaseDate: this.plugin.dateFormatter.format(result.release_date?.date, this.apiDateFormat),
 
 			userData: {
-				played: false,
+				played: true,
 				personalRating: 0,
 			},
 		});

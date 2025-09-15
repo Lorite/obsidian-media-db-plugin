@@ -114,7 +114,7 @@ export class BoardGameGeekAPI extends APIModel {
 			released: true,
 
 			userData: {
-				played: false,
+				played: true,
 				personalRating: 0,
 			},
 		});

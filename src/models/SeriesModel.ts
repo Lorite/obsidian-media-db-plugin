@@ -52,7 +52,7 @@ export class SeriesModel extends MediaTypeModel {
 		this.airedTo = '';
 
 		this.userData = {
-			watched: false,
+			watched: true,
 			lastWatched: '',
 			personalRating: 0,
 		};

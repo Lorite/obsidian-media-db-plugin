@@ -127,7 +127,7 @@ export class OpenLibraryAPI extends APIModel {
 			released: true,
 
 			userData: {
-				read: false,
+				read: true,
 				lastRead: '',
 				personalRating: 0,
 			},

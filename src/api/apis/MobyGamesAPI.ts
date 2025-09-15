@@ -107,7 +107,7 @@ export class MobyGamesAPI extends APIModel {
 			releaseDate: result.platforms[0].first_release_date ?? 'unknown',
 
 			userData: {
-				played: false,
+				played: true,
 
 				personalRating: 0,
 			},

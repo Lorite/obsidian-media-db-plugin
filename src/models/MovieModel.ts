@@ -50,7 +50,7 @@ export class MovieModel extends MediaTypeModel {
 		this.premiere = '';
 
 		this.userData = {
-			watched: false,
+			watched: true,
 			lastWatched: '',
 			personalRating: 0,
 		};

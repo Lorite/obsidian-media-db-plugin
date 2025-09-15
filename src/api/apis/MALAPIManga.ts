@@ -85,7 +85,7 @@ export class MALAPIManga extends APIModel {
 					status: result.status,
 
 					userData: {
-						read: false,
+						read: true,
 						lastRead: '',
 						personalRating: 0,
 					},
@@ -149,7 +149,7 @@ export class MALAPIManga extends APIModel {
 			status: result.status,
 
 			userData: {
-				read: false,
+				read: true,
 				lastRead: '',
 				personalRating: 0,
 			},

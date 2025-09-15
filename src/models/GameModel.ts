@@ -33,7 +33,7 @@ export class GameModel extends MediaTypeModel {
 		this.releaseDate = '';
 
 		this.userData = {
-			played: false,
+			played: true,
 			personalRating: 0,
 		};
 

@@ -46,7 +46,7 @@ export class ComicMangaModel extends MediaTypeModel {
 		this.publishedTo = '';
 
 		this.userData = {
-			read: false,
+			read: true,
 			lastRead: '',
 			personalRating: 0,
 		};

@@ -218,7 +218,7 @@ export class OMDbAPI extends APIModel {
 				premiere: this.plugin.dateFormatter.format(result.Released, this.apiDateFormat),
 
 				userData: {
-					watched: false,
+					watched: true,
 					lastWatched: '',
 					personalRating: 0,
 				},
@@ -249,7 +249,7 @@ export class OMDbAPI extends APIModel {
 				airedFrom: this.plugin.dateFormatter.format(result.Released, this.apiDateFormat),
 
 				userData: {
-					watched: false,
+					watched: true,
 					lastWatched: '',
 					personalRating: 0,
 				},
@@ -272,7 +272,7 @@ export class OMDbAPI extends APIModel {
 				releaseDate: this.plugin.dateFormatter.format(result.Released, this.apiDateFormat),
 
 				userData: {
-					played: false,
+					played: true,
 					personalRating: 0,
 				},
 			});

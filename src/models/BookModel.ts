@@ -33,10 +33,10 @@ export class BookModel extends MediaTypeModel {
 		this.isbn = 0;
 		this.isbn13 = 0;
 
-		this.released = false;
+		this.released = true;
 
 		this.userData = {
-			read: false,
+			read: true,
 			lastRead: '',
 			personalRating: 0,
 		};

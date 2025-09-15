@@ -37,7 +37,7 @@ export class BoardGameModel extends MediaTypeModel {
 		this.released = false;
 
 		this.userData = {
-			played: false,
+			played: true,
 			personalRating: 0,
 		};
 

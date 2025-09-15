@@ -97,7 +97,7 @@ export class ComicVineAPI extends APIModel {
 			status: result.status,
 
 			userData: {
-				read: false,
+				read: true,
 				lastRead: '',
 				personalRating: 0,
 			},

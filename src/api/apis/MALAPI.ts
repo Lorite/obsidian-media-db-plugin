@@ -150,7 +150,7 @@ export class MALAPI extends APIModel {
 				streamingServices: result.streaming?.map(x => x.name).filter(isTruthy),
 
 				userData: {
-					watched: false,
+					watched: true,
 					lastWatched: '',
 					personalRating: 0,
 				},
@@ -180,7 +180,7 @@ export class MALAPI extends APIModel {
 				streamingServices: result.streaming?.map(x => x.name).filter(isTruthy),
 
 				userData: {
-					watched: false,
+					watched: true,
 					lastWatched: '',
 					personalRating: 0,
 				},
@@ -211,7 +211,7 @@ export class MALAPI extends APIModel {
 				airing: result.airing,
 
 				userData: {
-					watched: false,
+					watched: true,
 					lastWatched: '',
 					personalRating: 0,
 				},

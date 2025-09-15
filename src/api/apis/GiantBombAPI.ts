@@ -153,7 +153,7 @@ export class GiantBombAPI extends APIModel {
 			releaseDate: result.original_release_date,
 
 			userData: {
-				played: false,
+				played: true,
 
 				personalRating: 0,
 			},
