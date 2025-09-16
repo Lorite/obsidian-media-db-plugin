@@ -10,6 +10,11 @@ export class GameModel extends MediaTypeModel {
 	publishers: string[];
 	genres: string[];
 	onlineRating: number;
+	onlineReviews: string;
+	onlineRecommendations: number;
+	requiredAge: string;
+	shortDescription: string;
+	description: string;
 	image: string;
 
 	released: boolean;
@@ -27,6 +32,11 @@ export class GameModel extends MediaTypeModel {
 		this.publishers = [];
 		this.genres = [];
 		this.onlineRating = 0;
+		this.onlineReviews = '';
+		this.onlineRecommendations = 0;
+		this.requiredAge = '';
+		this.shortDescription = '';
+		this.description = '';
 		this.image = '';
 
 		this.released = false;

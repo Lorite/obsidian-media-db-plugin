@@ -229,7 +229,12 @@ export class SteamAPI extends APIModel {
 			developers: result.developers,
 			publishers: result.publishers,
 			genres: result.genres?.map(x => x.description),
-			onlineRating: result.metacritic?.score,
+			onlineRating: (result.metacritic?.score ?? 0) * 10 / 100,
+			onlineReviews: result.reviews?.replace(/<[^>]*>/g, ''),
+			onlineRecommendations: result.recommendations?.total ?? 0,
+			requiredAge: result.required_age,
+			shortDescription: result.short_description,
+			description: result.detailed_description.replace(/<[^>]*>/g, ''),
 			image: finalimageurl,
 
 			released: !result.release_date?.coming_soon,
