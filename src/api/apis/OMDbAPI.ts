@@ -71,7 +71,7 @@ export class OMDbAPI extends APIModel {
 		this.typeMappings = new Map<string, string>();
 		this.typeMappings.set('movie', 'movie');
 		this.typeMappings.set('series', 'series');
-		this.typeMappings.set('videogame', 'videogame');
+		this.typeMappings.set('game', 'videogame');
 	}
 
 	async searchByTitle(title: string): Promise<MediaTypeModel[]> {
@@ -194,6 +194,8 @@ export class OMDbAPI extends APIModel {
 		if (type === undefined) {
 			throw Error(`${result.Type.toLowerCase()} is an unsupported type.`);
 		}
+
+		// console.debug(result);
 
 		if (type === 'movie') {
 			return new MovieModel({
